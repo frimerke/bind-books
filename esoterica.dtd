@@ -1,0 +1,26 @@
+<!ELEMENT text (author+, metadata, files)>
+
+<!ELEMENT author (name, pseudonym*, dateborn?, datedied?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT pseudonym (#PCDATA)>
+
+<!ELEMENT dateborn (year, month?, day?)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+
+<!ELEMENT datedied (year, month?, day?)>
+
+<!ELEMENT metadata (publisheddate?, publishedlang?)>
+<!ELEMENT publisheddate (#PCDATA)>
+<!ELEMENT publishedlang (#PCDATA)>
+
+<!ELEMENT files (epub?, mobi?, txt?, pdf?)>
+<!ELEMENT epub EMPTY>
+<!ATTLIST epub uri CDATA #REQUIRED>
+<!ELEMENT mobi EMPTY>
+<!ATTLIST mobi uri CDATA #REQUIRED>
+<!ELEMENT txt EMPTY>
+<!ATTLIST txt uri CDATA #REQUIRED>
+<!ELEMENT pdf EMPTY>
+<!ATTLIST pdf uri CDATA #REQUIRED>
