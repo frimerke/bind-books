@@ -4,9 +4,22 @@
 # loosely based on the node.js generate package script.
 #
 
+import argparse
+
+parser = argparse.ArgumentParser(description='Script to initialize a book/document into a collection.')
+
 # Take arguments - primarily a file to work off of.
 
+parser.add_argument('file', metavar='f', help='a file to enter into the catalog.')
+
+args = parser.parse_args()
+to_archive = args.file
+
 # Pose questions.
+
+title = input("Title: ")
+author = input("Author: ")
+year = input("Year: ")
 
 # Generate XML
 # validate against dtd
