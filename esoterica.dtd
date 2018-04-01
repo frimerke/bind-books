@@ -1,19 +1,27 @@
 <!ELEMENT text (author+, metadata, files)>
 
 <!ELEMENT author (name, pseudonym*, dateborn?, datedied?)>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT pseudonym (#PCDATA)>
+<!ELEMENT name (#CDATA)>
+<!ELEMENT pseudonym (#CDATA)>
 
 <!ELEMENT dateborn (year, month?, day?)>
-<!ELEMENT year (#PCDATA)>
-<!ELEMENT month (#PCDATA)>
-<!ELEMENT day (#PCDATA)>
+<!ELEMENT year (#CDATA)>
+<!ELEMENT month (#CDATA)>
+<!ELEMENT day (#CDATA)>
 
 <!ELEMENT datedied (year, month?, day?)>
+<!ELEMENT year (#CDATA)>
+<!ELEMENT month (#CDATA)>
+<!ELEMENT day (#CDATA)>
 
-<!ELEMENT metadata (publisheddate?, publishedlang?)>
-<!ELEMENT publisheddate (#PCDATA)>
-<!ELEMENT publishedlang (#PCDATA)>
+<!ELEMENT metadata (canonicaltitle, alternativetitle*, publisheddate?, publishedlang?, metatags)>
+<!ELEMENT canonicaltitle (#CDATA)>
+<!ELEMENT alternativetitle (#CDATA)>
+<!ELEMENT publisheddate (#CDATA)>
+<!ELEMENT publishedlang (#CDATA)>
+
+<!ELEMENT metatags (tag*)>
+<!ELEMENT tag (#CDATA)>
 
 <!ELEMENT files (epub?, mobi?, txt?, pdf?)>
 <!ELEMENT epub EMPTY>
